@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0f2fe;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, #B2CCFF, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+header p {
+    color: #dbeafe;
+}
+
+.profile {
+    display: block;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    color: #2563eb;
+    font-size: 22px;
+    border-bottom: 2px solid #dbeafe;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.info-list strong {
+    display: inline-block;
+    width: 90px;
+}
+
+.favorite-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* 취미 3개, 좋아하는 것 2개 모두 같은 방식으로 공간을 채우게 설정 */
+.favorite-container > .favorite-item {
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+
+.favorite-item {
+    height: 100%;
+    background-color: #f0f9ff;
+    border: 1px solid #dbeafe;
+    border-radius: 15px;
+    padding: 22px 15px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.favorite-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.12);
+}
+
+.favorite-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.favorite-item h3 {
+    color: #1e40af;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.favorite-item p {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0;
+}
+
+.detail-link {
+    color: #2563eb;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.detail-link:hover {
+    color: #1d4ed8;
+}
+
+.detail-link:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.favorite-subtitle {
+    margin-top: 25px;
+    margin-bottom: 12px;
+    color: #475569;
+    font-size: 17px;
+}
+
+.closing {
+    background-color: #eff6ff;
+    border-left: 5px solid #3b82f6;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #172554;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+.contact-button {
+    background-color: #dbeafe;
+    color: #172554;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #bfdbfe;
+}
+
+.contact-button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 50px 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    main {
+        margin-top: 25px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .info-list strong {
+        width: 75px;
+    }
+
+    .favorite-container {
+        flex-direction: column;
+    }
+
+    .favorite-container > .favorite-item {
+        flex: none;
+        min-width: 0;
+    }
+
+    .favorite-item {
+        height: auto;
+    }
+}
